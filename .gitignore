@@ -1,0 +1,41 @@
+## Maven
+/target/
+/.mvn/
+
+## Build outputs
+/out/
+/bin/
+/build/
+
+## IDE files
+/.idea/
+*.iml
+.classpath
+.project
+/.settings/
+.vscode/
+
+## Gradle
+/.gradle/
+build/
+
+## Java
+*.class
+*.jar
+
+## Static resources and generated metadata
+/.cache/
+/.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## Keys
+*.keystore
+
+# Ignore Maven generated maven-status metadata (if present inside target)
+target/**/maven-*
+
+# Local OS files
+desktop.ini
