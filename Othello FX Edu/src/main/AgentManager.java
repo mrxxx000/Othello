@@ -52,7 +52,12 @@ public class AgentManager extends Application{
 	 */
 	@Override
 	public void start(Stage primaryStage) {
-		new Othello(primaryStage, new ExampleAgentOne("Agent A"), new ExampleAgentTwo("Agent B"));
+		// Creates AI agent using Alpha-Beta Pruning Minimax
+		MyAgent aiAgent = new MyAgent("Alpha-Beta AI", PlayerTurn.PLAYER_ONE);
+		
+		// Start game: Human vs AI
+		new Othello(primaryStage, aiAgent);
+		//new Othello(primaryStage, new ExampleAgentOne("Agent A"), new ExampleAgentTwo("Agent B"));
 		//new Othello(primaryStage, new ExampleAgentB());
 		//new Othello(primaryStage, new ExampleAgentC());
 		//new Othello(primaryStage, new ExampleAgentD());

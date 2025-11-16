@@ -22,8 +22,9 @@ public class UserSettings {
 	public static final DeepeningType DEEPENING = DeepeningType.NONE;
 	/**
 	 * Determines the game mode to use
+	 * Human vs AI Agent
 	 */
-	public static final GameMode GAME_MODE = GameMode.AGENT_VS_AGENT;
+	public static final GameMode GAME_MODE = GameMode.HUMAN_VS_AGENT;
 	/**
 	 * Delay before the game starts when the agent is playing
 	 */
@@ -32,8 +33,9 @@ public class UserSettings {
 	 * Used for defining the maximum search time.
 	 * By popular rules the max search time should not
 	 * go above 5000 milliseconds;
+	 * Computer draw shall not take longer than 5 seconds
 	 */
-	public static final int MAX_SEARCH_TIME = 4000;
+	public static final int MAX_SEARCH_TIME = 5000;
 	
 	/**
 	 * Used for defining the minimum search time
@@ -47,13 +49,13 @@ public class UserSettings {
 	/**
 	 * Used for defining the search time
 	 */
-	public static final int SEARCH_TIME = 2500;
+	public static final int SEARCH_TIME = 5000;
 	/**
 	 * The time it take for each Agent to play when 
 	 * Agent vs Agent is active. Adjust to better see
 	 * play sequence or to make the game go quick.
 	 */
-	public static final int TURN_INTERVAL = 0;
+	public static final int TURN_INTERVAL = 500;
 	/**
 	 * Used for defining the maximum value
 	 */
@@ -80,7 +82,7 @@ public class UserSettings {
 	 * Specially on systems running other OS than windows. This
 	 * is off by default.
 	 */
-	public static final boolean USE_ANIMATION = (TURN_INTERVAL >= 1000) ;
+	public static final boolean USE_ANIMATION = true;
 
 	/**
 	 * This defines the scale at which the

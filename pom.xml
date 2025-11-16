@@ -58,7 +58,6 @@
             </resource>
         </resources>
         <plugins>
-            <!-- removed os-maven-plugin: we use OS-activated profiles for early property activation -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
