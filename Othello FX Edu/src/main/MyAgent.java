@@ -130,6 +130,11 @@ public class MyAgent extends Agent {
         
         // Print search statistics and board status
         long elapsedTime = System.currentTimeMillis() - startTime;
+        setSearchDepth(searchDepth);
+        setReachedLeafNodes(reachedLeafNodes);
+        setPrunedCounter(prunedCounter);
+        setNodesExamined(nodesExamined);
+
         printMoveStatistics(gameState, elapsedTime, bestValue);
         
         // Create and return the move
@@ -155,17 +160,20 @@ public class MyAgent extends Agent {
     private double maxValue(GameBoardState state, double alpha, double beta, int depth, long startTime) {
         // Increment nodes examined counter
         nodesExamined++;
+        setNodesExamined(nodesExamined);
         
         // Check if we should cut off the search
         if (cutoffTest(state, depth, startTime)) {
             // Update maximum depth reached
             searchDepth = Math.max(searchDepth, depth);
-            
+            setSearchDepth(searchDepth);
+
             // Check if this is a terminal state (game over)
             if (state.isTerminal()) {
                 reachedLeafNodes++;
+                setReachedLeafNodes(reachedLeafNodes);
             }
-            
+
             // Return heuristic evaluation of this state
             return evaluateState(state);
         }
@@ -203,6 +211,7 @@ public class MyAgent extends Agent {
             // Alpha-Beta pruning: if value >= beta, prune remaining branches
             if (value >= beta) {
                 prunedCounter++;
+                setPrunedCounter(prunedCounter);
                 return value; // Beta cutoff
             }
             
@@ -226,17 +235,20 @@ public class MyAgent extends Agent {
     private double minValue(GameBoardState state, double alpha, double beta, int depth, long startTime) {
         // Increment nodes examined counter
         nodesExamined++;
+        setNodesExamined(nodesExamined);
         
         // Check if we should cut off the search
         if (cutoffTest(state, depth, startTime)) {
             // Update maximum depth reached
             searchDepth = Math.max(searchDepth, depth);
-            
+            setSearchDepth(searchDepth);
+
             // Check if this is a terminal state (game over)
             if (state.isTerminal()) {
                 reachedLeafNodes++;
+                setReachedLeafNodes(reachedLeafNodes);
             }
-            
+
             // Return heuristic evaluation of this state
             return evaluateState(state);
         }
@@ -276,6 +288,7 @@ public class MyAgent extends Agent {
             // Alpha-Beta pruning: if value <= alpha, prune remaining branches
             if (value <= alpha) {
                 prunedCounter++;
+                setPrunedCounter(prunedCounter);
                 return value; // Alpha cutoff
             }
             

@@ -25,8 +25,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
 import javafx.util.Duration;
 import main.UserSettings;
 
@@ -315,8 +313,6 @@ public class GameAboutView extends Group {
 		
 		private Text fieldValueView = new Text();
 		
-        final WebView browser = new WebView();
-        final WebEngine webEngine = browser.getEngine();
         
 		public Link(String fieldValue, String link) {
 			super();
