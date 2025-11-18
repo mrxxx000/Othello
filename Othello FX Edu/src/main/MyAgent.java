@@ -11,16 +11,6 @@ import java.util.List;
 
 /**
  * AI Agent implementation using Minimax algorithm with Alpha-Beta Pruning.
- * 
- * This agent implements the adversarial search algorithm to find the optimal move
- * in the Othello game. It uses:
- * - Minimax algorithm for decision making
- * - Alpha-Beta pruning for optimization
- * - Depth-limited search with time constraints
- * - Heuristic evaluation function for non-terminal states
- * 
- * Assignment: α-β Pruning Minimax – Othello
- * Course: DA272E – Artificial Intelligence
  */
 public class MyAgent extends Agent {
     
